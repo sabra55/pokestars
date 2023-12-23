@@ -1,7 +1,7 @@
 roms := \
+	pokeblue_debug.gbc \
 	pokered.gbc \
-	pokeblue.gbc \
-	pokeblue_debug.gbc
+	pokeblue.gbc
 patches := \
 	pokered.patch \
 	pokeblue.patch
@@ -93,7 +93,7 @@ endif
 
 $(pokered_obj):        RGBASMFLAGS += -D _RED
 $(pokeblue_obj):       RGBASMFLAGS += -D _BLUE
-$(pokeblue_debug_obj): RGBASMFLAGS += -D _BLUE -D _DEBUG
+$(pokeblue_debug_obj): RGBASMFLAGS += -D _RED -D _DEBUG
 $(pokered_vc_obj):     RGBASMFLAGS += -D _RED -D _RED_VC
 $(pokeblue_vc_obj):    RGBASMFLAGS += -D _BLUE -D _BLUE_VC
 
