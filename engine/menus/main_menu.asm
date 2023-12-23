@@ -11,8 +11,8 @@ MainMenu:
 	predef LoadSAV
 
 .mainMenuLoop
-	ld c, 20
-	call DelayFrames
+	;ld c, 20
+	;call DelayFrames
 	xor a ; LINK_STATE_NONE
 	ld [wLinkState], a
 	ld hl, wPartyAndBillsPCSavedMenuItem
@@ -53,6 +53,10 @@ MainMenu:
 	ld hl, wd730
 	res 6, [hl]
 	call UpdateSprites
+	call GBFadeInFromWhite
+	ld a, MUSIC_MAIN_MENU
+	ld [wNewSoundID], a
+	;call PlaySound
 	xor a
 	ld [wCurrentMenuItem], a
 	ld [wLastMenuItem], a
@@ -105,7 +109,7 @@ MainMenu:
 	jp nz, .mainMenuLoop ; pressed B
 	jr .inputLoop
 .pressedA
-	call GBPalWhiteOutWithDelay3
+	call GBFadeOutToBlack
 	call ClearScreen
 	ld a, PLAYER_DIR_DOWN
 	ld [wPlayerDirection], a
@@ -307,6 +311,7 @@ LinkCanceledText:
 	text_end
 
 StartNewGame:
+	call GBFadeOutToWhite
 	ld hl, wd732
 	; Ensure debug mode is not used when
 	; starting a regular new game.
@@ -344,7 +349,7 @@ ContinueText:
 
 NewGameText:
 	db   "NEW GAME"
-	next "OPTION@"
+	next "OPTIONS@"
 
 CableClubOptionsText:
 	db   "TRADE CENTER"
@@ -433,11 +438,12 @@ PrintPlayTime:
 
 SaveScreenInfoText:
 	db   "PLAYER"
-	next "BADGES    "
-	next "#DEX    "
+	next "BADGES"
+	next "#DEX"
 	next "TIME@"
 
 DisplayOptionMenu:
+	call GBFadeOutToWhite
 	hlcoord 0, 0
 	ld b, 3
 	ld c, 18
@@ -462,6 +468,7 @@ DisplayOptionMenu:
 	hlcoord 2, 16
 	ld de, OptionMenuCancelText
 	call PlaceString
+	call GBFadeInFromWhite
 	xor a
 	ld [wCurrentMenuItem], a
 	ld [wLastMenuItem], a
@@ -497,6 +504,7 @@ DisplayOptionMenu:
 .exitMenu
 	ld a, SFX_PRESS_AB
 	call PlaySound
+	call GBFadeOutToWhite
 	ret
 .eraseOldMenuCursor
 	ld [wTopMenuItemX], a

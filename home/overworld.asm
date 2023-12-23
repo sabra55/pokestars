@@ -37,6 +37,7 @@ EnterMap::
 	set 6, [hl]
 	xor a
 	ld [wJoyIgnore], a
+	call GBFadeInFromBlack
 
 OverworldLoop::
 	call DelayFrame

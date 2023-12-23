@@ -11,7 +11,7 @@ PlayIntro:
 	inc a
 	ldh [hAutoBGTransferEnabled], a
 	call PlayShootingStar
-	call PlayIntroScene
+	;call PlayIntroScene
 	call GBFadeOutToWhite
 	xor a
 	ldh [hSCX], a
@@ -21,6 +21,7 @@ PlayIntro:
 	ret
 
 PlayIntroScene:
+	;farcall PlayIntroMovie
 	ld b, SET_PAL_NIDORINO_INTRO
 	call RunPaletteCommand
 	ldpal a, SHADE_BLACK, SHADE_DARK, SHADE_LIGHT, SHADE_WHITE
@@ -330,12 +331,12 @@ PlayShootingStar:
 	ld c, 40
 	call DelayFrames
 .next
-	ld a, BANK(Music_IntroBattle)
-	ld [wAudioROMBank], a
-	ld [wAudioSavedROMBank], a
-	ld a, MUSIC_INTRO_BATTLE
-	ld [wNewSoundID], a
-	call PlaySound
+	;ld a, BANK(Music_IntroBattle)
+	;ld [wAudioROMBank], a
+	;ld [wAudioSavedROMBank], a
+	;ld a, MUSIC_INTRO_BATTLE
+	;ld [wNewSoundID], a
+	;call PlaySound
 	call IntroClearMiddleOfScreen
 	call ClearSprites
 	jp Delay3
@@ -443,23 +444,12 @@ FightIntroBackMon:
 	ds 16, $00 ; blank tile
 FightIntroBackMonEnd:
 
-IF DEF(_RED)
 FightIntroFrontMon:
 	INCBIN "gfx/intro/red_nidorino_1.2bpp"
 FightIntroFrontMon2:
 	INCBIN "gfx/intro/red_nidorino_2.2bpp"
 FightIntroFrontMon3:
 	INCBIN "gfx/intro/red_nidorino_3.2bpp"
-ENDC
-
-IF DEF(_BLUE)
-FightIntroFrontMon:
-	INCBIN "gfx/intro/blue_jigglypuff_1.2bpp"
-FightIntroFrontMon2:
-	INCBIN "gfx/intro/blue_jigglypuff_2.2bpp"
-FightIntroFrontMon3:
-	INCBIN "gfx/intro/blue_jigglypuff_3.2bpp"
-ENDC
 
 FightIntroFrontMonEnd:
 

@@ -17,6 +17,9 @@ INCLUDE "audio/headers/musicheaders2.asm"
 SECTION "Music Headers 3", ROMX
 INCLUDE "audio/headers/musicheaders3.asm"
 
+SECTION "Music Headers 4", ROMX
+INCLUDE "audio/headers/musicheaders4.asm"
+
 
 SECTION "Sound Effects 1", ROMX
 
@@ -408,7 +411,7 @@ INCLUDE "audio/music/pokecenter.asm"
 SECTION "Music 2", ROMX
 
 INCLUDE "audio/sfx/pokeflute_ch5_ch6.asm"
-INCLUDE "audio/sfx/unused_fanfare.asm"
+;INCLUDE "audio/sfx/unused_fanfare.asm"
 INCLUDE "audio/music/gymleaderbattle.asm"
 INCLUDE "audio/music/trainerbattle.asm"
 INCLUDE "audio/music/wildbattle.asm"
@@ -445,3 +448,8 @@ INCLUDE "audio/music/surfing.asm"
 INCLUDE "audio/music/jigglypuffsong.asm"
 INCLUDE "audio/music/halloffame.asm"
 INCLUDE "audio/music/credits.asm"
+
+
+SECTION "Music 4", ROMX
+
+INCLUDE "audio/music/mainmenu.asm"

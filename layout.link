@@ -177,6 +177,9 @@ ROMX $2B
 	"Pokédex Text"
 ROMX $2C
 	"Move Names"
+ROMX $2D
+	"Music Headers 4"
+	"Music 4"
 WRAM0
 	"Audio RAM"
 	org $c100

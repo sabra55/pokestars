@@ -55,6 +55,9 @@ ENDM
 	music_const MUSIC_MEET_EVIL_TRAINER,   Music_MeetEvilTrainer
 	music_const MUSIC_MEET_FEMALE_TRAINER, Music_MeetFemaleTrainer
 	music_const MUSIC_MEET_MALE_TRAINER,   Music_MeetMaleTrainer
+	
+	; AUDIO_4
+	music_const MUSIC_MAIN_MENU,		   Music_MainMenu
 
 	; AUDIO_1 AUDIO_2 AUDIO_3
 DEF NOISE_INSTRUMENTS_START EQUS "SFX_NOISE_INSTRUMENT01"
