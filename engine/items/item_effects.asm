@@ -39,7 +39,7 @@ ItemUsePtrTable:
 	dw ItemUseMedicine   ; POTION
 	dw ItemUseBait       ; BOULDERBADGE
 	dw ItemUseRock       ; CASCADEBADGE
-	dw UnusableItem      ; THUNDERBADGE
+	dw ItemUseFakePotion ; THUNDERBADGE
 	dw UnusableItem      ; RAINBOWBADGE
 	dw UnusableItem      ; SOULBADGE
 	dw UnusableItem      ; MARSHBADGE
@@ -2940,3 +2940,12 @@ CheckMapForMon:
 	jr nz, .loop
 	dec hl
 	ret
+
+ItemUseFakePotion:
+	ld hl, NonsenseTextForTheHackedDuplicatePotionItemTheNameOfTheTextOfWhichIsVeryLongJustLikeTheTextItself
+	call PrintText
+	ret
+	
+NonsenseTextForTheHackedDuplicatePotionItemTheNameOfTheTextOfWhichIsVeryLongJustLikeTheTextItself:
+	text_far _NonsenseTextForTheHackedDuplicatePotionItemTheNameOfTheTextOfWhichIsVeryLongJustLikeTheTextItself
+	text_end

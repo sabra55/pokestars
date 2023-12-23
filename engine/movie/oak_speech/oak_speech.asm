@@ -72,7 +72,7 @@ OakSpeech:
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
-	ld a, NIDORINO
+	ld a, NIDORINA
 	ld [wd0b5], a
 	ld [wcf91], a
 	call GetMonHeader
@@ -161,23 +161,62 @@ OakSpeech:
 	call GBFadeOutToWhite
 	jp ClearScreen
 OakSpeechText1:
-	text_far _OakSpeechText1
-	text_end
+	text "Hello there!"
+	line "Welcome to the"
+	cont "world of #MON!"
+
+	para "My name is"
+	line "ORCHID. People"
+	para "call me the"
+	line "#MON PROF."
+	prompt
 OakSpeechText2:
-	text_far _OakSpeechText2A
+	text "This is what"
+	line "we call a"
+	cont "#MON.@"
 	; BUG: The cry played does not match the sprite displayed.
 	sound_cry_nidorina
-	text_far _OakSpeechText2B
-	text_end
+
+	text_start
+	para "Unfortunately,"
+	line "#MON are rare"
+	cont "in CENIA."
+
+	para "Our governor"
+	line "has been cap-"
+	para "tured by TEAM"
+	line "C. recently,"
+	para "which made them"
+	line "very rare."
+	para "However, I've been"
+	line "undertaking"
+	cont "#MON research."
+	prompt
 IntroducePlayerText:
-	text_far _IntroducePlayerText
-	text_end
+	text "Could you intro-"
+	line "duce yourself to"
+	cont "me?"
+	prompt
 IntroduceRivalText:
-	text_far _IntroduceRivalText
-	text_end
+	text "This is my grand-"
+	line "son. He's been"
+	para "your rival since"
+	line "you were a baby."
+	para "Hmm...Now, let me"
+	line "think... What was"
+	cont "his name...?"
+	prompt
 OakSpeechText3:
-	text_far _OakSpeechText3
-	text_end
+	text "<PLAYER>!"
+	para "Your very own"
+	line "#MON legend is"
+	cont "about to begin!"
+
+	para "A world of dreams"
+	line "and adventures"
+	para "with #MON"
+	line "awaits. Let's go!"
+	prompt
 
 FadeInIntroPic:
 	ld hl, IntroFadePalettes

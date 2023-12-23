@@ -28,8 +28,10 @@ ChoosePlayerName:
 	jp PrintText
 
 YourNameIsText:
-	text_far _YourNameIsText
-	text_end
+	text "Hm, I see..."
+	line "So, your name"
+	cont "is <PLAYER>."
+	prompt
 
 ChooseRivalName:
 	call OakSpeechSlidePicRight
@@ -61,8 +63,12 @@ ChooseRivalName:
 	jp PrintText
 
 HisNameIsText:
-	text_far _HisNameIsText
-	text_end
+	text "Oh yes! That's"
+	line "right! I know!"
+	para "His name is"
+	line "<RIVAL>! How"
+	cont "embarrassing!"
+	prompt
 
 OakSpeechSlidePicLeft:
 	push de

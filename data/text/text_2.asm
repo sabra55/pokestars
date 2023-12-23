@@ -156,10 +156,9 @@ _GymStatueText2::
 	done
 
 _ViridianCityPokecenterGuyText::
-	text "#MON CENTERs"
-	line "heal your tired,"
-	cont "hurt or fainted"
-	cont "#MON!"
+	text "#HOSPITALs"
+	line "used to be known"
+	cont "as # CENTREs."
 	done
 
 _PewterCityPokecenterGuyText::
@@ -169,7 +168,7 @@ _PewterCityPokecenterGuyText::
 	line "sings, #MON"
 	cont "get drowsy..."
 
-	para "...Me too..."
+	para "...So do I..."
 	line "Snore..."
 	done
 
@@ -435,7 +434,7 @@ _OakLabEmailText::
 	para "#MON LEAGUE HQ"
 	line "INDIGO PLATEAU"
 
-	para "PS: PROF.OAK,"
+	para "PS: PROF.ORCHID,"
 	line "please visit us!"
 	cont "..."
 	done
@@ -576,9 +575,11 @@ _IndigoPlateauHQText::
 
 _RedBedroomSNESText::
 	text "<PLAYER> is"
-	line "playing the SNES!"
-	cont "...Okay!"
-	cont "It's time to go!"
+	line "playing on his"
+	cont "PEGASUS!"
+	para "...Alright!"
+	line "No more time to"
+	cont "waste!"
 	done
 
 _Route15UpstairsBinocularsText::
@@ -684,6 +685,11 @@ _ViridianBlackboardPrlzText::
 	para "Use PARLYZ HEAL"
 	line "for treatment!"
 	prompt
+
+_PokeCentreText1::
+	text "Heal Your #MON!"
+	line "#HOSPITAL"
+	done
 
 _ViridianBlackboardBurnText::
 	text "A burn reduces"
@@ -1692,7 +1698,7 @@ _LinkCanceledText::
 	text "The link was"
 	line "canceled."
 	done
-
+; the OakSpeech texts are unused.
 _OakSpeechText1::
 	text "Hello there!"
 	line "Welcome to the"

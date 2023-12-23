@@ -54,7 +54,7 @@ _MartSignText::
 
 _PokeCenterSignText::
 	text "Heal Your #MON!"
-	line "#MON CENTER"
+	line "#HOSPITAL"
 	done
 
 _FoundItemText::

@@ -4,7 +4,7 @@ _RedsHouse1FMomWakeUpText::
 	cont "home some day."
 	cont "It said so on TV."
 
-	para "PROF.OAK, next"
+	para "PROF.ORCHID, next"
 	line "door, is looking"
 	cont "for you."
 	done
@@ -24,14 +24,29 @@ _RedsHouse1FMomLookingGreatText::
 	done
 
 _RedsHouse1FTVStandByMeMovieText::
-	text "There's a movie"
-	line "on TV. Four boys"
-	cont "are walking on"
-	cont "railroad tracks."
+	text "BREAKING NEWS:"
+	line "TEAM C. takes"
+	para "over the govern-"
+	line "ment!"
 
-	para "I better go too."
+	para "TEAM C. works"
+	line "for the good"
+	cont "of all #MON!"
+
+	para "For the safety"
+	line "of thousands of"
+	para "#MON in CENIA,"
+	line "it is the duty"
+	para "of every TRAINER"
+	line "to turn in their"
+	para "#MON through the"
+	line "special TEAM C."
+	para "PC located in every"
+	line "#HOSPITAL!"
 	done
 
 _RedsHouse1FTVWrongSideText::
-	text "Oops, wrong side."
+	text "I better see what"
+	line "the commotion's all"
+	cont "about!"
 	done
