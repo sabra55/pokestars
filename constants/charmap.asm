@@ -61,6 +61,7 @@
 	charmap "└",         $7d
 	charmap "┘",         $7e
 	charmap " ",         $7f
+	charmap "_",	     $7f
 
 ; Actual characters (from gfx/font/font_battle_extra.png)
 
